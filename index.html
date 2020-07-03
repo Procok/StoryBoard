@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <title>Story Board</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <spa-toolbar></spa-toolbar>
+        <router-view></router-view>
+      </v-app>
+    </div>
+
+    <script src="./scripts/dataManager.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <!-- Vue Pages and Components here -->
+    <script src="./pages/home.vue.js"></script>
+    <script src="./pages/settings.vue.js"></script>
+    <script src="./pages/components/toolbar.vue.js"></script>
+
+    <script>
+      Vue.use(VueRouter);
+      const routes = [
+        {
+          path: "/",
+          component: spahome,
+        },
+        {
+          path: "/settings",
+          component: settings
+        }
+      ];
+
+      const router = new VueRouter({
+        routes, // short for `routes: routes`
+      });
+
+      var app = new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        watch: {},
+        data: {
+          msg: "Hello",
+        },
+        methods: {},
+        router,
+      });
+    </script>
+  </body>
+</html>
