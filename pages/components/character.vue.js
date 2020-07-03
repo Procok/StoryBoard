@@ -1,5 +1,5 @@
 var character = Vue.component("Character", {
-    template: `
+  template: `
       <v-container fill-height>
           <v-layout align-center>
               <v-flex>
@@ -12,6 +12,5 @@ var character = Vue.component("Character", {
           </v-layout>
       </v-container>
     `,
-    props: ["title"],
-  });
-  
+  props: ["title"],
+});

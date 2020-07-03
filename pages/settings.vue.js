@@ -8,8 +8,4 @@ var settings = Vue.component("Settings", {
           </v-layout>
       </v-container>
     `,
-  props: ["title"],
-  $_veeValidate: {
-    validator: "new",
-  },
 });

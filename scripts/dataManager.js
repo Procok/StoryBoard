@@ -1,4 +1,5 @@
 function saveToName(name, data) {
+    name = "s_" + name
   if (
     !localStorage.getItem(name) ||
     confirm("Do you want to overwrite this save?")
@@ -15,7 +16,7 @@ function autosave(data) {
     localStorage.setItem("autosavePos", 0);
   }
   let pos = localStorage.getItem("autosavePos");
-  localStorage.setItem("autosave" + pos, JSON.stringify(data));
+  localStorage.setItem("s_autosave" + pos, JSON.stringify(data));
   localStorage.setItem("autosavePos", (parseInt(pos) + 1) % 5);
 }
 

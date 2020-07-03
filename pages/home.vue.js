@@ -11,6 +11,5 @@ var spahome = Vue.component("Home", {
             </v-flex>
         </v-layout>
     </v-container>
-  `,
-  props: ["title"],
+  `
 });

@@ -23,8 +23,8 @@
   <body>
     <div id="app" v-cloak>
       <v-app>
-        <spa-toolbar></spa-toolbar>
-        <router-view></router-view>
+        <spa-toolbar app></spa-toolbar>
+        <router-view app></router-view>
       </v-app>
     </div>
 
@@ -37,6 +37,7 @@
     <!-- Vue Pages and Components here -->
     <script src="./pages/home.vue.js"></script>
     <script src="./pages/settings.vue.js"></script>
+    <script src="./pages/board.vue.js"></script>
     <script src="./pages/components/toolbar.vue.js"></script>
 
     <script>
@@ -49,7 +50,11 @@
         {
           path: "/settings",
           component: settings
-        }
+        },
+        {
+          path: "/board",
+          component: board
+        },
       ];
 
       const router = new VueRouter({
