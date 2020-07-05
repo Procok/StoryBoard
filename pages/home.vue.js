@@ -1,6 +1,6 @@
 var spahome = Vue.component("Home", {
   template: `
-    <v-container fill-height>
+    <v-container fill-height app>
         <v-layout align-center>
             <v-flex>
                 <h3 class="display-3">Welcome to the site</h3>

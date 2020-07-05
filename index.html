@@ -29,6 +29,7 @@
     </div>
 
     <script src="./scripts/dataManager.js"></script>
+    <script src="./scripts/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
@@ -37,6 +38,7 @@
     <!-- Vue Pages and Components here -->
     <script src="./pages/home.vue.js"></script>
     <script src="./pages/settings.vue.js"></script>
+    <script src="./pages/features.vue.js"></script>
     <script src="./pages/board.vue.js"></script>
     <script src="./pages/components/toolbar.vue.js"></script>
 
@@ -54,6 +56,10 @@
         {
           path: "/board",
           component: board
+        },
+        {
+          path: "/features",
+          component: features
         },
       ];
 

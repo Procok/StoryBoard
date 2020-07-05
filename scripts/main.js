@@ -1,0 +1,5 @@
+var currentBoard = undefined;
+
+
+
+
